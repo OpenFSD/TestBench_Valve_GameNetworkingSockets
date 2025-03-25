@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\drago\\source\\repos\\TestBench_Valve_GameNetworkingSockets\\ClientAssembly\\ClientAssembly.csproj": {}
+    "C:\\Users\\drago\\Source\\Repos\\TestBench_Valve_GameNetworkingSockets\\ClientAssembly\\ClientAssembly.csproj": {}
   },
   "projects": {
-    "C:\\Users\\drago\\source\\repos\\TestBench_Valve_GameNetworkingSockets\\ClientAssembly\\ClientAssembly.csproj": {
+    "C:\\Users\\drago\\Source\\Repos\\TestBench_Valve_GameNetworkingSockets\\ClientAssembly\\ClientAssembly.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\drago\\source\\repos\\TestBench_Valve_GameNetworkingSockets\\ClientAssembly\\ClientAssembly.csproj",
+        "projectUniqueName": "C:\\Users\\drago\\Source\\Repos\\TestBench_Valve_GameNetworkingSockets\\ClientAssembly\\ClientAssembly.csproj",
         "projectName": "ClientAssembly",
-        "projectPath": "C:\\Users\\drago\\source\\repos\\TestBench_Valve_GameNetworkingSockets\\ClientAssembly\\ClientAssembly.csproj",
+        "projectPath": "C:\\Users\\drago\\Source\\Repos\\TestBench_Valve_GameNetworkingSockets\\ClientAssembly\\ClientAssembly.csproj",
         "packagesPath": "C:\\Users\\drago\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\drago\\source\\repos\\TestBench_Valve_GameNetworkingSockets\\ClientAssembly\\obj\\",
+        "outputPath": "C:\\Users\\drago\\Source\\Repos\\TestBench_Valve_GameNetworkingSockets\\ClientAssembly\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

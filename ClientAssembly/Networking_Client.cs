@@ -111,7 +111,7 @@ namespace Florence.ClientAssembly
 
             Address address = new Address();
 
-            address.SetAddress(Florence.NetworkingClient.Networking.Get_Local_IPAddress(), 3074);//ToDo
+            address.SetAddress(Florence.ClientAssembly.Networking.Get_Local_IPAddress(), 3074);//ToDo
 
             connection = client.Connect(ref address);
 
@@ -160,7 +160,7 @@ namespace Florence.ClientAssembly
             byte[] data = new byte[64];
             data[0] = praiseEventId;
 
-            uint connection = Florence.NetworkingClient.Networking.Get_Connection();
+            uint connection = Florence.ClientAssembly.Networking.Get_Connection();
 
             switch (praiseEventId)
             {
@@ -174,7 +174,7 @@ namespace Florence.ClientAssembly
                         {
                             temp[byte_index] = array.ElementAt(count);
                         }
-                        data[count + 1] = Florence.NetworkingClient.Networking.ConvertBoolArrayToByte(temp);
+                        data[count + 1] = Florence.ClientAssembly.Networking.ConvertBoolArrayToByte(temp);
                         count++;
                     }
                     break;
