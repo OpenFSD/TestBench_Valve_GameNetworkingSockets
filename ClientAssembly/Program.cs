@@ -15,6 +15,7 @@ namespace Florence.ServerAssembly
         static void Main()
         {
             Florence.ClientAssembly.Networking.CreateNetworkingClient();
+            //Valve.Sockets.Native.GameNetworkingSockets_Init();
             Valve.Sockets.Native.GameNetworkingSockets_Init((nint)Florence.ClientAssembly.Networking.Get_NetworkIdentity(), new StringBuilder(1024));
 
             thread_OutputRecieve = new System.Threading.Thread(Thread_OutputRecieve);
@@ -23,6 +24,11 @@ namespace Florence.ServerAssembly
             Console.WriteLine("\npress any key to SIMULATE input.");
             Console.ReadKey();
             Thread_Input_SIMULATION();
+
+            while(true)
+            {
+
+            }
         }
 
         static void Thread_Input_SIMULATION()

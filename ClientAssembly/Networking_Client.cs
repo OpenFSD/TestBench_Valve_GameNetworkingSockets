@@ -13,21 +13,19 @@ namespace Florence.ClientAssembly
 {
     public class Networking
     {
-        static private Valve.Sockets.NetworkingIdentity identity;
-        static private uint connection;
+        static private uint connection = 0;
         static private NetworkingSockets sockets = null;
-        static private NetworkingMessage netMessage;
+        static private Valve.Sockets.NetworkingMessage netMessage;
 
         public Networking()
         {
-            connection = 0;
-            sockets = new NetworkingSockets();
-            netMessage = new NetworkingMessage();
+
         }
 
         static public void CreateNetworkingClient()
         {
             NetworkingSockets client = new NetworkingSockets();
+            sockets = client;
 
             uint connection = 0;
 
@@ -58,8 +56,6 @@ namespace Florence.ClientAssembly
             address.SetAddress(Florence.ClientAssembly.Networking.Get_Local_IPAddress(), 3074);//ToDo
 
             connection = client.Connect(ref address);
-
-            identity = new Valve.Sockets.NetworkingIdentity();
 
 #if VALVESOCKETS_SPAN
 	MessageCallback message = (in NetworkingMessage netMessage) => {
