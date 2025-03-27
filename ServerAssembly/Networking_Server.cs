@@ -19,9 +19,7 @@ namespace Florence.ServerAssembly
 
         public Networking()
         {
-            
-            sockets = new Valve.Sockets.NetworkingSockets();
-            netMessage = new Valve.Sockets.NetworkingMessage();
+
         }
 
         static public void CreateNetworkingServer()
