@@ -14,7 +14,7 @@ namespace Florence.ClientAssembly
     public class Networking
     {
         static private uint connection = 0;
-        static private NetworkingSockets sockets = null;
+        static private NetworkingSockets client = null;
         static private Valve.Sockets.NetworkingMessage netMessage;
 
         public Networking()
@@ -24,8 +24,7 @@ namespace Florence.ClientAssembly
 
         static public void CreateNetworkingClient()
         {
-            NetworkingSockets client = new NetworkingSockets();
-            sockets = client;
+            client = new NetworkingSockets();
 
             uint connection = 0;
 
@@ -126,7 +125,7 @@ namespace Florence.ClientAssembly
                     
                     break;
             }
-            sockets.SendMessageToConnection(connection, data);
+            client.SendMessageToConnection(connection, data);
         }
 
         public static void CopyPayloadFromMessage()
@@ -162,6 +161,10 @@ namespace Florence.ClientAssembly
             utils.SetDebugCallback(DebugType.Everything, debug);
         }
 
+        public static NetworkingSockets Get_client_NetworkingSockets()
+        {
+            return client;
+        }
         private static string Get_Local_IPAddress()
         {
             var host = Dns.GetHostEntry(Dns.GetHostName());

@@ -468,7 +468,7 @@ namespace Valve.Sockets
             nativeSockets = Native.SteamAPI_SteamNetworkingSockets_v009();
 
             if (nativeSockets == IntPtr.Zero)
-                throw new InvalidOperationException("Networking sockets not created");
+                throw new InvalidOperationException("Networking sockets not created");//RUNNING ERROR HERE
         }
 
         public ListenSocket CreateListenSocket(ref Address address)
