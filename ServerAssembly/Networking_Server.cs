@@ -14,7 +14,7 @@ namespace Florence.ServerAssembly
     {
         static private List<nint> clientsToSendTo = new List<nint>(1);
         static private nint connection;
-        static private Valve.Sockets.NetworkingSockets sockets = null;
+        static private Valve.Sockets.NetworkingSockets server = null;
         static private Valve.Sockets.NetworkingMessage netMessage;
 
         public Networking()
@@ -122,7 +122,7 @@ namespace Florence.ServerAssembly
                     break;
 
             }
-            sockets.SendMessageToConnection((uint)clientsToSendTo.IndexOf(0), data);
+            server.SendMessageToConnection((uint)clientsToSendTo.IndexOf(0), data);
         }
 
         public static void CopyPayloadFromMessage()
