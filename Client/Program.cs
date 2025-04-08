@@ -1,4 +1,5 @@
 ﻿//ClientAssembly
+
 using System;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -19,12 +20,13 @@ namespace Florence.ServerAssembly
             Valve.Networking.CreateNetworkingClient();
             Console.WriteLine("created => NetworkingClient");//ToDo TestBench
 
-            Valve.Sockets.Library.Initialize();
-            Valve.Sockets.Library.Initialize(new StringBuilder(1024));
-            Valve.Sockets.NetworkingIdentity networkingIdentity = new Valve.Sockets.NetworkingIdentity();
-            Valve.Sockets.Library.Initialize(ref networkingIdentity, new StringBuilder(1024));
-            Console.WriteLine("completed => Initialise(NetworkIdentity)");//ToDo TestBench
-
+            /*
+                        Valve.Sockets.Library.Initialize();
+                        Valve.Sockets.Library.Initialize(new StringBuilder(1024));
+                        Valve.Sockets.NetworkingIdentity networkingIdentity = new Valve.Sockets.NetworkingIdentity();
+                        Valve.Sockets.Library.Initialize(ref networkingIdentity, new StringBuilder(1024));
+                        Console.WriteLine("completed => Initialise(NetworkIdentity)");//ToDo TestBench
+            */
             thread_OutputRecieve = new System.Threading.Thread(Thread_OutputRecieve);
             Console.WriteLine("created => Thread: to scan for signal from server");//ToDo TestBench
             thread_OutputRecieve.Start();
